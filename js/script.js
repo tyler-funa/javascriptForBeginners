@@ -6,7 +6,13 @@ const askButton = elementCreate('button', 'Ask Me Anything');
 let answers = elementCreate('div');
 let imgs = elementCreate('img','', answers);
   imgs.src = './magic/magic8ball_start.png';
-  console.log(imgs.src);
+/*******************************ASSIGN CLASSES*************************************************/
+header.classList.add('container', 'text-center');
+userQuery.classList.add('container-fluid', 'col-12');
+askButton.classList.add('container-fluid');
+answers.classList.add('container');
+imgs.classList.add('container');
+
 
 
 
@@ -21,77 +27,76 @@ function elementCreate(tag, text = '', parent = document.body) {
   parent.appendChild(eleName);
   return eleName;
 }
-
-
 function get(selector) {
   return document.querySelectorAll(selector);
 }
-
-
 function yourAnswer() {
   imgs.remove();
-  if (genRando() === 0) {
+  const number = genRando();
+  console.log(number,number,number);
+  if (number === 0) {
     imgs.src = './magic/magic8ball_1.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 1) {
+  } else if (number === 1) {
     imgs.src = './magic/magic8ball_2.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 2) {
+  } else if (number === 2) {
     imgs.src = './magic/magic8ball_3.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 3) {
+  } else if (number === 3) {
     imgs.src = './magic/magic8ball_4.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 4) {
+  } else if (number === 4) {
     imgs.src = './magic/magic8ball_5.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 5) {
+  } else if (number === 5) {
     imgs.src = './magic/magic8ball_6.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 6) {
+  } else if (number === 6) {
     imgs.src = './magic/magic8ball_7.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 7) {
+  } else if (number === 7) {
     imgs.src = './magic/magic8ball_8.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 8) {
+  } else if (number === 8) {
     imgs.src = './magic/magic8ball_9.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 9) {
+  } else if (number === 9) {
     imgs.src = './magic/magic8ball_10.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 10) {
+  } else if (number === 10) {
     imgs.src = './magic/magic8ball_11.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 11) {
+  } else if (number === 11) {
     imgs.src = './magic/magic8ball_12.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 12) {
+  } else if (number === 12) {
     imgs.src = './magic/magic8ball_13.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 13) {
+  } else if (number === 13) {
     imgs.src = './magic/magic8ball_14.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 14) {
+  } else if (number === 14) {
     imgs.src = './magic/magic8ball_15.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 15) {
+  } else if (number === 15) {
     imgs.src = './magic/magic8ball_16.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 16) {
+  } else if (number === 16) {
     imgs.src = './magic/magic8ball_17.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 17) {
+  } else if (number === 17) {
     imgs.src = './magic/magic8ball_18.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 18) {
+  } else if (number === 18) {
     imgs.src = './magic/magic8ball_19.png'
     answers.appendChild(imgs);
-  } else if (genRando() === 19) {
+  } else if (number === 19) {
     imgs.src = './magic/magic8ball_20.png'
     answers.appendChild(imgs);
+  } else {
+    console.log('something else');
   }
-
 }
 
 
