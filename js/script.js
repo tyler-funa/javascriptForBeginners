@@ -3,23 +3,105 @@
 const header = elementCreate('h1', 'Magic Eight Ball');
 const userQuery = elementCreate('textArea', '',);
 const askButton = elementCreate('button', 'Ask Me Anything');
+let answers = elementCreate('div');
+let imgs = elementCreate('img','', answers);
+  imgs.src = './magic/magic8ball_start.png';
+  console.log(imgs.src);
 
 
 
 
 
 
-/***********************************FUNCTIONS***************************/
+
+/***********************************FUNCTIONS*****************************************************/
 function elementCreate(tag, text = '', parent = document.body) {
   const eleName = document.createElement(tag);
   eleName.textContent = text;
   parent.appendChild(eleName);
   return eleName;
 }
+
+
 function get(selector) {
   return document.querySelectorAll(selector);
 }
+
+
+function yourAnswer() {
+  imgs.remove();
+  if (genRando() === 0) {
+    imgs.src = './magic/magic8ball_1.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 1) {
+    imgs.src = './magic/magic8ball_2.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 2) {
+    imgs.src = './magic/magic8ball_3.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 3) {
+    imgs.src = './magic/magic8ball_4.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 4) {
+    imgs.src = './magic/magic8ball_5.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 5) {
+    imgs.src = './magic/magic8ball_6.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 6) {
+    imgs.src = './magic/magic8ball_7.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 7) {
+    imgs.src = './magic/magic8ball_8.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 8) {
+    imgs.src = './magic/magic8ball_9.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 9) {
+    imgs.src = './magic/magic8ball_10.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 10) {
+    imgs.src = './magic/magic8ball_11.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 11) {
+    imgs.src = './magic/magic8ball_12.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 12) {
+    imgs.src = './magic/magic8ball_13.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 13) {
+    imgs.src = './magic/magic8ball_14.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 14) {
+    imgs.src = './magic/magic8ball_15.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 15) {
+    imgs.src = './magic/magic8ball_16.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 16) {
+    imgs.src = './magic/magic8ball_17.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 17) {
+    imgs.src = './magic/magic8ball_18.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 18) {
+    imgs.src = './magic/magic8ball_19.png'
+    answers.appendChild(imgs);
+  } else if (genRando() === 19) {
+    imgs.src = './magic/magic8ball_20.png'
+    answers.appendChild(imgs);
+  }
+
+}
+
+
+
+function genRando() {
+  return Math.round(Math.random()*19)
+}
 /************************ON CLICK******************************************/
+get('button')[0].addEventListener('click', yourAnswer);
+
 
 
 
