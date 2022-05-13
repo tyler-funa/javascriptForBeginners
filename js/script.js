@@ -1,17 +1,17 @@
 /********************************CREATE/APPEND ELEMENTS************************/
-
-const header = elementCreate('h1', 'Magic Eight Ball');
-const userQuery = elementCreate('textArea', '',);
-const askButton = elementCreate('button', 'Ask Me Anything');
-let answers = elementCreate('div');
+const container = elementCreate('div');
+const header = elementCreate('h1', 'Magic Eight Ball', container);
+const userQuery = elementCreate('textArea', '', container);
+const askButton = elementCreate('button', 'Ask Me Anything', container);
+let answers = elementCreate('div', '', container);
 let imgs = elementCreate('img','', answers);
   imgs.src = './magic/magic8ball_start.png';
 /*******************************ASSIGN CLASSES*************************************************/
 header.classList.add('container', 'text-center');
-userQuery.classList.add('container-fluid', 'col-12');
+userQuery.classList.add('container-fluid');
 askButton.classList.add('container-fluid');
-answers.classList.add('container');
-imgs.classList.add('container');
+answers.classList.add('container-fluid', 'max');
+imgs.classList.add('container-fluid');
 
 
 
@@ -111,20 +111,20 @@ get('button')[0].addEventListener('click', yourAnswer);
 
 
 
-/********************************FINAL PROJECT**********************************/
+/********************************FINAL-PROJECT**************************************/
 /*
-Begin your final project:
-Your final project will be to build a magic 8 ball app
-Create a new repository named: magic8ball
-Clone your repository
-Add your index file, stylesheet, script file and the provided 8ball images
+Begin your final project.
+Your final project will be to build a magic 8 ball app.
+Create a new repository named: magic8ball.
+Clone your repository.
+Add your index file, stylesheet, script file and the provided 8ball images.
 Main objectives:
-Create an input field for users to ask a question
-Create a label for your input field telling your user to "Ask me anything!"
-Create an "ask" button (this will run the function that outputs a random magic 8 ball image)
-Create a div with an id of "answers" that you will insert the images into using js
-Create an "ask" function that when clicked, will choose a random 8ball image and insert it into your "answers" div
-Replace the input field with the user's question when displaying the answer
-Style your page any way you like
-Activate Github Pages for your project
+Create an input field for users to ask a question.
+Create a label for your input field telling your user to "Ask me anything!".
+Create an "ask" button (this will run the function that outputs a random magic 8 ball image).
+Create a div with an id of "answers" that you will insert the images into using js.
+Create an "ask" function that when clicked, will choose a random 8ball image and insert it into. your "answers" div.
+Replace the input field with the user's question when displaying the answer.
+Style your page any way you like.
+Activate Github Pages for your project.
 */
